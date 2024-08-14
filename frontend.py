@@ -191,11 +191,14 @@ def checker():
             df["fonthighlight_color"] = df["fonthighlight_color"].replace("turquoise",WD_COLOR_INDEX.TURQUOISE,regex=True)
             df["fonthighlight_color"] = df["fonthighlight_color"].replace("yellow",WD_COLOR_INDEX.YELLOW,regex=True)
             doc = add_new_doc(df)
-            tick += 1
-            if tick == 10:
-                time.sleep(15)
-            elif tick == 20:
-                time.sleep(15)
+
+            if sum(mehmehlist) >19:
+                time.sleep(4.1)
+            # tick += 1
+            # if tick == 10:
+            #     time.sleep(15)
+            # elif tick == 20:
+            #     time.sleep(15)
 
     return doc
 
