@@ -183,7 +183,6 @@ def checker():
     doc = Document("data/coverpage.docx") 
     tick = 0
     for x in range(len(mehmehlist)):
-        print(x)
         if mehmehlist[x] == True:
             # print(mehmehlist[x])
             df = conn.read(worksheet=list_of_sheets[x])
@@ -194,9 +193,9 @@ def checker():
             doc = add_new_doc(df)
             tick += 1
             if tick == 10:
-                time.sleep(5)
+                time.sleep(15)
             elif tick == 20:
-                time.sleep(10)
+                time.sleep(15)
 
     return doc
 
@@ -210,9 +209,7 @@ password = st.text_input("Password", key="password", type="password")
 docname = st.text_input(label="Document Name",placeholder = "Insert Word Document File Name Here Before Clicking Create")
 
 if ( 
-    st.button("Create Word Document", on_click=Word_Document_Created)
-    
-    or st.session_state.word_doc_button_clicked
+    st.button("Create Word Document")
 ):
     
     check = password_checker(username,password)
