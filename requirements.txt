@@ -1,0 +1,7 @@
+
+python_docx
+st_gsheets_connection==0.0.4
+streamlit==1.36.0
+numpy==1.26.4
+
+
