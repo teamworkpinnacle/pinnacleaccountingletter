@@ -209,7 +209,9 @@ password = st.text_input("Password", key="password", type="password")
 docname = st.text_input(label="Document Name",placeholder = "Insert Word Document File Name Here Before Clicking Create")
 
 if ( 
-    st.button("Create Word Document")
+     st.button("Create Word Document", on_click=Word_Document_Created)
+
+    or st.session_state.word_doc_button_clicked
 ):
     
     check = password_checker(username,password)
